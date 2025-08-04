@@ -1,0 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #139b56;
+    --secondary-color: #f8f9fa;
+    --dark-color: #343a40;
+    --light-color: #ffffff;
+    --text-muted: #6c757d;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--dark-color);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.section-title { font-weight: 700; color: var(--dark-color); }
+.btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+.btn-primary:hover { background-color: #10864c; border-color: #0f7b45; }
+.btn-success { background-color: #198754; border-color: #198754; }
+
+/* SHAPES & NAVBAR (Sama seperti sebelumnya) */
+.shape { position: absolute; background-color: var(--primary-color); opacity: 0.05; border-radius: 50%; z-index: -1; }
+.shape-1 { width: 300px; height: 300px; top: 10%; left: -150px; }
+.shape-2 { width: 250px; height: 250px; top: 70%; right: -120px; }
+.navbar { transition: all 0.3s ease; }
+.logo { font-weight: 700; font-size: 1.5rem; color: var(--primary-color) !important; }
+.navbar-nav .nav-link { font-weight: 500; color: var(--dark-color); transition: color 0.3s ease; }
+.navbar-nav .nav-link:hover { color: var(--primary-color); }
+
+/* Tambahkan ini ke file payment.css */
+
+.diskon-baris {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.harga-diskon {
+    font-weight: 600;
+}
+
+.promo-section .form-control {
+    text-transform: uppercase;
+}
+
+#promo-status {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.promo-sukses {
+    color: var(--primary-color);
+}
+
+.promo-gagal {
+    color: #dc3545; /* Warna merah untuk error */
+}
+
+/* Garis pemisah */
+.payment-summary hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-top: 1px dashed #dee2e6;
+}
+
+/* PAYMENT PAGE STYLES */
+.payment-step {
+    background: var(--light-color);
+    padding: 2.5rem;
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+    position: relative;
+}
+
+.step-number {
+    position: absolute;
+    top: -20px;
+    left: 2.5rem;
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    color: var(--light-color);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(19, 155, 86, 0.3);
+}
+
+.step-title {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.bank-card {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    padding: 1.5rem;
+    text-align: center;
+    position: relative;
+    background-color: #fdfdfd;
+}
+
+.bank-card img {
+    height: 25px;
+    margin-bottom: 1rem;
+    filter: grayscale(100%);
+    opacity: 0.7;
+}
+
+.bank-card .account-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--dark-color);
+    margin-bottom: 0.25rem;
+}
+
+.bank-card .account-name {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.btn-copy {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #e9ecef;
+    border: none;
+    color: var(--text-muted);
+    border-radius: 5px;
+    padding: 5px 8px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-copy:hover {
+    background: #dee2e6;
+}
+
+.btn-copy.copied {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+}
+
+.form-control, .form-select {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+}
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(19, 155, 86, 0.25);
+}
+
+#form-status { padding: 1rem; border-radius: 8px; display: none; }
+#form-status.sukses { display: block; background-color: #d1e7dd; color: #0f5132; }
+#form-status.gagal { display: block; background-color: #f8d7da; color: #842029; }
+
+.help-section {
+    background-color: #e9ecef;
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+/* FOOTER (Sama seperti sebelumnya) */
+.footer-section { background-color: var(--dark-color); padding: 3rem 0; margin-top: 5rem;}
+.footer-section .logo { color: var(--light-color) !important; }

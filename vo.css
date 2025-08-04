@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #139b56;
+    --secondary-color: #f8f9fa;
+    --dark-color: #343a40;
+    --light-color: #ffffff;
+    --text-muted: #6c757d;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-color);
+    color: var(--dark-color);
+    position: relative;
+    overflow-x: hidden;
+}
+
+.section-title {
+    font-weight: 700;
+    color: var(--dark-color);
+}
+
+.btn-primary { background-color: var(--primary-color); border-color: var(--primary-color); }
+.btn-primary:hover { background-color: #10864c; border-color: #0f7b45; }
+.btn-outline-primary { color: var(--primary-color); border-color: var(--primary-color); }
+.btn-outline-primary:hover { background-color: var(--primary-color); color: var(--light-color); }
+
+.bg-light { background-color: var(--secondary-color) !important; }
+
+/* SHAPES */
+.shape { position: absolute; background-color: var(--primary-color); opacity: 0.05; border-radius: 50%; z-index: -1; }
+.shape-1 { width: 300px; height: 300px; top: 10%; left: -150px; }
+.shape-2 { width: 250px; height: 250px; top: 70%; right: -120px; }
+
+/* NAVBAR */
+.navbar { transition: all 0.3s ease; }
+.logo { font-weight: 700; font-size: 1.5rem; color: var(--primary-color) !important; }
+.navbar-nav .nav-link { font-weight: 500; color: var(--dark-color); transition: color 0.3s ease; }
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active { color: var(--primary-color); }
+
+/* HERO */
+.hero-section { padding-top: 5rem; padding-bottom: 5rem; }
+.hero-image {
+    border-radius: 20px;
+    transform: rotate(3deg);
+    transition: transform 0.3s ease-in-out;
+}
+.hero-image:hover { transform: rotate(0deg) scale(1.02); }
+
+/* LAYANAN (BENEFIT CARD) */
+.benefit-card {
+    background: var(--light-color);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.07);
+    border-color: var(--primary-color);
+}
+.icon-wrapper {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 1.5rem;
+    background: rgba(19, 155, 86, 0.1);
+    color: var(--primary-color);
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+/* TIMELINE */
+.timeline { position: relative; max-width: 700px; margin: 0 auto; padding: 20px 0; }
+.timeline::before { content: ''; position: absolute; top: 15px; bottom: 15px; left: 8px; width: 4px; background: #e9ecef; border-radius: 2px; }
+.timeline-item { position: relative; margin-bottom: 30px; padding-left: 40px; }
+.timeline-dot { position: absolute; left: 0; top: 5px; width: 20px; height: 20px; background-color: white; border: 4px solid var(--primary-color); border-radius: 50%; z-index: 1; }
+.timeline-content { background-color: #fff; border: 1px solid #e9ecef; padding: 20px; border-radius: 8px; }
+.timeline-content h6 { font-weight: 700; color: var(--primary-color); }
+.timeline-content p { margin-bottom: 0; color: var(--text-muted); }
+.timeline-item { opacity: 0; transform: translateX(-30px); transition: opacity 0.5s ease-out, transform 0.5s ease-out; }
+.timeline-item.visible { opacity: 1; transform: translateX(0); }
+@media (max-width: 768px) { .timeline-item { padding-left: 30px; } .timeline-dot { left: -5px; } }
+
+/* TESTIMONI */
+.testimoni-card { background: var(--light-color); border-radius: 15px; padding: 30px; text-align: center; }
+.testimoni-card i { font-size: 2rem; color: var(--primary-color); opacity: 0.5; margin-bottom: 1rem; }
+.testimoni-card p { font-size: 1.1rem; font-style: italic; color: var(--text-muted); }
+.client-info { display: flex; align-items: center; justify-content: center; margin-top: 1.5rem; }
+.client-info img { width: 50px; height: 50px; border-radius: 50%; margin-right: 15px; }
+.client-info div { text-align: left; }
+.client-info strong { display: block; }
+.client-info span { font-size: 0.9rem; color: var(--text-muted); }
+.swiper-pagination-bullet-active { background: var(--primary-color) !important; }
+
+/* PRICING */
+.pricing-card {
+    background: var(--light-color);
+    border: 1px solid #e9ecef;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.pricing-card:hover { transform: translateY(-10px); box-shadow: 0 10px 30px rgba(0,0,0,0.07); }
+.pricing-card .price { font-size: 3rem; font-weight: 700; color: var(--primary-color); margin: 1rem 0; }
+.pricing-card .price sup { font-size: 1.5rem; font-weight: 500; top: -1.2rem; }
+.pricing-card ul { list-style: none; padding: 0; margin: 2rem 0; }
+.pricing-card ul li { margin-bottom: 1rem; }
+.pricing-card ul i { color: var(--primary-color); margin-right: 10px; }
+.pricing-card.popular { border: 2px solid var(--primary-color); }
+.badge-popular { position: absolute; top: 15px; right: -40px; background: var(--primary-color); color: var(--light-color); padding: 5px 40px; font-size: 0.8rem; font-weight: 600; transform: rotate(45deg); }
+
+/* CONTACT FORM */
+.contact-form .form-control { padding: 12px; border-radius: 8px; border: 1px solid #ced4da; }
+.contact-form .form-control:focus { border-color: var(--primary-color); box-shadow: 0 0 0 0.25rem rgba(19, 155, 86, 0.25); }
+#form-status { padding: 1rem; border-radius: 8px; display: none; }
+#form-status.sukses { display: block; background-color: #d1e7dd; color: #0f5132; }
+#form-status.gagal { display: block; background-color: #f8d7da; color: #842029; }
+
+/* FOOTER */
+.footer-section { background-color: var(--dark-color); padding: 3rem 0; }
+.footer-section .logo { color: var(--light-color) !important; }
+.social-icons a { color: var(--text-muted); font-size: 1.2rem; margin: 0 10px; transition: color 0.3s ease; }
+.social-icons a:hover { color: var(--light-color); }

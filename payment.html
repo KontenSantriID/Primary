@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="KontenSantri.id - Layanan Kreatif Digital dari Pesantren. Membangun website, mengelola media sosial, dan menyediakan konten video profesional.">
+    <meta name="keywords" content="KontenSantri, Web Development, Social Media Management, Content Video, Voice Over, Pesantren, Digital Kreatif">
+    <meta name="author" content="KontenSantri.id">
+    <link rel="icon" href="icon.ico" type="image/x-icon">
+    <title>Pembayaran & Konfirmasi - KontenSantri.id</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">KontenSantri.id</a>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="Index.html">Kembali ke Beranda</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h1 class="section-title">Halaman Pembayaran & Konfirmasi</h1>
+                <p class="lead text-muted">Selesaikan pembayaran Anda dengan aman dan mudah dalam 2 langkah.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="payment-step">
+                        <div class="step-number">1</div>
+                        <h3 class="step-title">Lakukan Pembayaran</h3>
+
+                        <div class="payment-summary mb-4">
+                            <p class="text-muted mb-1">Anda akan melakukan pembayaran untuk:</p>
+                            <h4 id="paket-dipilih" class="paket-title">Memuat detail paket...</h4>
+                            
+                            <div id="diskon-info" class="diskon-baris" style="display: none;">
+                                <span>Diskon (<span id="kode-promo-info"></span>)</span>
+                                <span id="jumlah-diskon" class="harga-diskon">- Rp 0</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="fw-bold">Total Tagihan:</span>
+                                <span id="harga-paket" class="harga-total">Rp 0</span>
+                            </div>
+                        </div>
+                        <div class="promo-section mb-4">
+                            <label for="promo-code" class="form-label fw-bold">Punya Kode Promo?</label>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="promo-code" placeholder="Masukkan kode di sini">
+                                <button class="btn btn-outline-secondary" type="button" id="apply-promo-btn">Gunakan</button>
+                            </div>
+                            <div id="promo-status" class="mt-2"></div>
+                        </div>
+                        <p class="text-muted">Silakan transfer ke salah satu rekening di bawah ini sesuai dengan **Total Tagihan** yang tertera di atas.</p>
+                        
+                        </div>
+                        
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="bank-card">
+                                    <img src="https://via.placeholder.com/100x30/0033A0/FFFFFF?text=BCA" alt="BCA Logo">
+                                    <p class="account-number">123 456 7890</p>
+                                    <p class="account-name">a.n. PT Konten Santri Indonesia</p>
+                                    <button class="btn-copy" data-clipboard-text="1234567890">
+                                        <i class="far fa-copy"></i> <span>Salin</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bank-card">
+                                    <img src="https://via.placeholder.com/100x30/0033A0/FFFFFF?text=Mandiri" alt="Mandiri Logo">
+                                    <p class="account-number">098 765 4321</p>
+                                    <p class="account-name">a.n. PT Konten Santri Indonesia</p>
+                                    <button class="btn-copy" data-clipboard-text="0987654321">
+                                        <i class="far fa-copy"></i> <span>Salin</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bank-card">
+                                    <img src="https://via.placeholder.com/100x30/0033A0/FFFFFF?text=Mandiri" alt="Mandiri Logo">
+                                    <p class="account-number">098 765 4321</p>
+                                    <p class="account-name">a.n. PT Konten Santri Indonesia</p>
+                                    <button class="btn-copy" data-clipboard-text="0987654321">
+                                        <i class="far fa-copy"></i> <span>Salin</span>
+                                    </button>
+                                </div>    
+                            </div>
+                            <div class="col-md-6">
+                                <div class="bank-card">
+                                    <img src="https://via.placeholder.com/100x30/0033A0/FFFFFF?text=Mandiri" alt="Mandiri Logo">
+                                    <p class="account-number">098 765 4321</p>
+                                    <p class="account-name">a.n. PT Konten Santri Indonesia</p>
+                                    <button class="btn-copy" data-clipboard-text="0987654321">
+                                        <i class="far fa-copy"></i> <span>Salin</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    <div class="payment-step mt-5">
+                        <div class="step-number">2</div>
+                        <h3 class="step-title">Konfirmasi Pembayaran Anda</h3>
+                        <p class="text-muted">Setelah transfer berhasil, mohon isi formulir di bawah ini agar pembayaran dapat segera kami verifikasi.</p>
+
+                        <form id="payment-form" action="https://formspree.io/f/xgvzlvbe" method="POST" enctype="multipart/form-data" class="mt-4">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="invoiceNumber" class="form-label">Nomor Invoice / Proyek</label>
+                                    <input type="text" id="invoiceNumber" name="invoice_number" class="form-control" placeholder="Contoh: INV-123" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="fullName" class="form-label">Nama Lengkap</label>
+                                    <input type="text" id="fullName" name="full_name" class="form-control" placeholder="Nama Anda" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="email" class="form-label">Alamat Email</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email Anda" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="amount" class="form-label">Jumlah Transfer</label>
+                                    <input type="number" id="amount" name="amount" class="form-control" placeholder="Contoh: 3000000" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="bank" class="form-label">Transfer ke Bank</label>
+                                    <select id="bank" name="destination_bank" class="form-select" required>
+                                        <option value="" disabled selected>Pilih Bank Tujuan...</option>
+                                        <option value="BCA">BCA</option>
+                                        <option value="Mandiri">Mandiri</option>
+                                        <option value="DANA">Dana</option>
+                                        <option value="GoPay">GoPay</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="paymentProof" class="form-label">Upload Bukti Transfer</label>
+                                    <input type="file" id="paymentProof" name="payment_proof" class="form-control" required>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4">
+                                <button type="submit" class="btn btn-primary btn-lg shadow">Kirim Konfirmasi</button>
+                            </div>
+                        </form>
+                        <div id="form-status" class="mt-4"></div>
+                    </div>
+
+                    <div class="text-center mt-5 help-section">
+                        <p class="text-muted">Mengalami kendala? <br class="d-md-none"> Hubungi kami via WhatsApp untuk bantuan.</p>
+                        <a href="https://wa.me/6281914588114" target="_blank" class="btn btn-success">
+                            <i class="fab fa-whatsapp"></i> Hubungi Support
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer-section">
+        <div class="container text-center">
+            <a class="logo d-block mb-3" href="#">KontenSantri.id</a>
+            <p class="text-muted small">&copy; 2025 KontenSantri.id. Dibuat dengan semangat dan doa.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="payment.js"></script>
+</body>
+</html>
